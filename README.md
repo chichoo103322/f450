@@ -1,20 +1,31 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# F450 AI 地面站 (Python/PySide6 版本)
 
-# Run and deploy your AI Studio app
+本项目已从 Web 架构迁移至纯 Python 桌面应用架构，以支持在本地环境（如 PyCharm）中高性能运行。
 
-This contains everything you need to run your app locally.
+## 如何运行
 
-View your app in AI Studio: https://ai.studio/apps/drive/1SDr7G1RWQ1CUkdwCPzp5xmLdLlbJeUSs
+1. **环境准备**:
+   确保你安装了 Python 3.9 或更高版本。
 
-## Run Locally
+2. **安装依赖**:
+   在 PyCharm 的终端中运行：
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-**Prerequisites:**  Node.js
+3. **运行应用**:
+   直接运行 `main.py`：
+   ```bash
+   python main.py
+   ```
 
+## 快捷键说明
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **空格 (Space)**: 紧急停机 (Disarm)
+- **C 键**: 开始手势行程校准
+- **S 键**: 采样当前手部距离（用于校准）
+
+## 文件结构
+
+- `main.py`: 包含主程序入口、UI 界面代码、OpenCV 视觉线程以及模拟 MAVLink 逻辑。
+- `requirements.txt`: 依赖列表。

@@ -1,0 +1,7 @@
+{
+  "name": "Copy of F450 AI Ground Station",
+  "description": "A React-based Ground Control Station for F450 drones featuring simulated MAVLink telemetry, computer vision gesture control logic, and realtime data visualization.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
